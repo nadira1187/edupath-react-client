@@ -1,7 +1,8 @@
 import Banner from "../banner/Banner";
 import Card from "../card/Card";
-import Login from "../login/Login";
+import Footer from "../footer/Footer";
 import Navbar from "../navbar/Navbar";
+
 
 
 const Home = () => {
@@ -10,7 +11,7 @@ const Home = () => {
             <Navbar></Navbar>
             <Banner></Banner>
             <Card></Card>
-            <Login></Login>
+            <Footer></Footer>
         </div>
     );
 };
