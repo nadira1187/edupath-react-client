@@ -1,6 +1,6 @@
 // Example in index.css or index.js
 import 'tailwindcss/tailwind.css';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
 

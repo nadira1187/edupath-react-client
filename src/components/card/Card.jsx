@@ -14,7 +14,7 @@ const Card = () => {
   return (
     <div className="bg-amber-200 bg-opacity-30">
         <h3 className="text-3xl text-center py-5 font-bold">Our Services</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 ml-3 p-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 ml-3 p-5">
       {cards.map((cart) => (
         <div key={cart.id} className="card w-96 bg-base-100 shadow-xl">
           <figure className="px-10 pt-10">
