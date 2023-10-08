@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "name": "Workshop Management Service",
+      "image": "image-url-1",
+      "price": "$199/month",
+      "shortDescription": "Streamline workshop organization, manage attendees, and enhance the learning experience with our Workshop Management Service."
+    },
+    {
+      "id": 2,
+      "name": "Webinar Hosting Platform",
+      "image": "image-url-2",
+      "price": "$149/month",
+      "shortDescription": "Host professional webinars with ease, engage your audience, and analyze performance using our Webinar Hosting Platform."
+    },
+    {
+      "id": 3,
+      "name": "Career Fair Registration and Matching Service",
+      "image": "image-url-3",
+      "price": "$299/month",
+      "shortDescription": "Simplify career fair registrations, match job seekers with employers, and create successful networking events."
+    },
+    {
+      "id": 4,
+      "name": "Career Fair Analytics and Reporting Platform",
+      "image": "image-url-4",
+      "price": "$199/month",
+      "shortDescription": "Gain insights into career fair performance, track attendee engagement, and make data-driven decisions with our Analytics Platform."
+    },
+    {
+      "id": 5,
+      "name": "Educational Conferences Service",
+      "image": "image-url-5",
+      "price": "$249/month",
+      "shortDescription": "Organize and manage educational conferences seamlessly, attract attendees, and deliver exceptional learning experiences."
+    },
+    {
+      "id": 6,
+      "name": "Training Programs",
+      "image": "image-url-6",
+      "price": "Varies by Program",
+      "shortDescription": "Access a diverse range of training programs designed to enhance your skills and career prospects. Prices vary by program."
+    }
+  ]
+  
