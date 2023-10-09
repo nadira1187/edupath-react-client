@@ -37,10 +37,8 @@ const Details = () => {
                     </p>
                     <div className="flex justify-between">
                         <button className="my-6 btn normal-case btn-primary bg-orange-700 text-white border-none">
-                            Purchase Ticket: ${detail.price}
-                        </button><Link to='/'><button className="btn btn-ghost border-white bg-orange-400 text-white shadow-2xl my-6">
-                            Go Back to Home
-                        </button></Link>
+                            Purchase Ticket: {detail.price}
+                        </button>
                     </div>
                 </div>
 
