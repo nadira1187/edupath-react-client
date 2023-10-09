@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import Navbar from "../navbar/Navbar";
 import { useContext } from "react";
-
+import swal from "sweetalert";
 
 const Register = () => {
     const {createUser} = useContext(AuthContext)
@@ -16,9 +16,25 @@ const Register = () => {
         console.log(email);
         console.log(password);
         console.log(name);
+        if (password.length < 6) {
+            return swal("Opps !!", "Total length of password at least 6 characters", "error");
+        }
+
+        // Check if the input contains at least one capital letter
+        if (!/[A-Z]/.test(password)) {
+            return swal("Opps !!", "Give at least one capital letter ", "error");
+        }
+
+        // Check if the input contains any special characters
+        // eslint-disable-next-line no-useless-escape
+        if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password)) {
+            return swal("Opps !!", "Give at least one special character ", "error");
+        }
         createUser(email,password)
         .then(result =>{
             console.log(result.user);
+            swal("Congrats,You are logged in");
+
         })
         .catch(error =>{
             console.error(error)

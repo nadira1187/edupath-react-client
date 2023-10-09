@@ -3,6 +3,8 @@ import 'tailwindcss/tailwind.css';
 import { Link ,NavLink} from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
+import { FaUserCircle } from "react-icons/fa";
+import swal from 'sweetalert';
 const links=<>
 <NavLink to="/"  className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ?
@@ -23,7 +25,13 @@ const Navbar = () => {
     const {user,logOut} =useContext(AuthContext);
     const handleSignOut = () =>{
         logOut()
-        .then()
+        .then(result =>{
+            console.log(result.user);
+            swal("Are you sure you want to do this?", {
+                buttons: ["Oh noez!", true],
+              });
+
+        })
         .catch()
     }
     return (
@@ -39,8 +47,8 @@ const Navbar = () => {
       </ul>
     </div>
    
-    <a className="btn btn-ghost normal-case  text-orange-500  text-4xl font-bold">
-    <img className='w-[40px] h-[40px]' src="https://i.ibb.co/BLg3XM4/icon1.png" alt="icon1" border="0"/>EduPath</a>
+    <a className="btn btn-ghost normal-case invisible md:visible text-orange-500  text-4xl font-bold">
+    <img className='w-[40px] h-[40px] ' src="https://i.ibb.co/BLg3XM4/icon1.png" alt="icon1" border="0"/>EduPath</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal gap-4 px-1">
@@ -48,8 +56,13 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end gap-5">
-    <div>
-        <img className='w-10 rounded-full' src="https://i.ibb.co/hcs6qMW/banner.png" alt="" />
+    <p>{user?.displayName}</p>
+    <div>{user?
+        <img className='rounded-full' src={user?.photoURL} alt="" />
+        :
+        <FaUserCircle className='text-4xl'></FaUserCircle>
+    }
+       
     </div>
     {
         user? 

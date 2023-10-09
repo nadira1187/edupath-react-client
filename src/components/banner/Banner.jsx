@@ -7,7 +7,7 @@ const Banner = () => {
     return (
         <div>
             <div className="hero min-h-screen  bg-amber-500 bg-opacity-10 rounded-2xl mt-4">
-  <div className="hero-content flex-col lg:flex-row-reverse">
+  <div className="hero-content flex-col-reverse lg:flex-row-reverse">
   <div data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000" ><img src="https://i.ibb.co/x5GCyNB/banner.png" className=" w-11/12 rounded-2xl" /></div> 
     <div data-aos="fade-right">
       <h1 className="text-5xl font-bold">Empowering Education & Training Excellence</h1>

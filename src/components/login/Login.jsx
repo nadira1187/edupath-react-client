@@ -3,12 +3,30 @@ import Navbar from "../navbar/Navbar";
 import { useContext } from "react";
 import { useLocation,useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import swal from "sweetalert";
+import { FcGoogle } from "react-icons/fc";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import app from "../../firebase/firebase.config";
 
 
 const Login = () => {
     const {signIn}=useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
+    const auth = getAuth(app);
+
+    const provider = new GoogleAuthProvider();
+    const handleGoogleLogin = () => {
+
+        signInWithPopup(auth, provider)
+            .then(res => {
+                console.log(res);
+                swal("Signed in!", "You Signed in Successfully!", "success");
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }
 
 
     const handleLogin = e =>{
@@ -22,6 +40,8 @@ const Login = () => {
         .then(result => {
             console.log(result.user)
             navigate(location?.state?location.state:'/');
+            swal("Good job!", "You are logged in!", "success");
+
         })
         .catch(error =>{
             console.error(error);
@@ -51,6 +71,10 @@ const Login = () => {
         <div className="form-control mt-6">
           <button className="btn btn-primary normal-case bg-orange-500 border-orange-500 text-white">Login</button>
         </div>
+        <div className="form-control mt-6">
+          <button onClick={handleGoogleLogin} className="btn btn-primary normal-case bg-transparent border-orange-500 text-black"><FcGoogle className="text-xl"></FcGoogle>Continue with Google</button>
+        </div>
+
         <Link to='/Register'>Do not have an account ? <a className="text-orange-500" >Register</a></Link>
       </form>
     </div>

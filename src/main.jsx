@@ -13,11 +13,13 @@ import Details from './components/details/Details';
 import Career from './components/career/Career';
 import AboutUs from './components/aboutus/AboutUs';
 import PrivateRoute from './components/privateroute/PrivateRoute';
+import ErrorPage from './components/errorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
