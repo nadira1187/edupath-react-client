@@ -5,7 +5,7 @@ import { useContext } from "react";
 import swal from "sweetalert";
 
 const Register = () => {
-    const {createUser} = useContext(AuthContext)
+    const {createUser ,updateUser} = useContext(AuthContext)
     const handleRegister = e =>{
         e.preventDefault();
         console.log(e.currentTarget)
@@ -16,6 +16,7 @@ const Register = () => {
         console.log(email);
         console.log(password);
         console.log(name);
+        
         if (password.length < 6) {
             return swal("Opps !!", "Total length of password at least 6 characters", "error");
         }
@@ -30,11 +31,14 @@ const Register = () => {
         if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password)) {
             return swal("Opps !!", "Give at least one special character ", "error");
         }
-        createUser(email,password)
+
+        createUser(email,password,name)
         .then(result =>{
             console.log(result.user);
+            updateUser(name,null)
+            .then(()=>console.log("updated"))
+            .catch()
             swal("Congrats,You are logged in");
-
         })
         .catch(error =>{
             console.error(error)
@@ -67,7 +71,7 @@ const Register = () => {
         <div className="form-control mt-6">
           <button className="btn btn-primary normal-case bg-orange-500 border-orange-500 text-white">Register</button>
         </div>
-        <p>Already have an account ?<a href=""> <Link to="/login">Login</Link></a></p>
+         <p>Already have an account ? <Link className="text-orange-500" to='/login'>Login</Link></p>
       </form>
     </div>
         </div>

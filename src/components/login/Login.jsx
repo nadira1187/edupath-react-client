@@ -22,6 +22,7 @@ const Login = () => {
             .then(res => {
                 console.log(res);
                 swal("Signed in!", "You Signed in Successfully!", "success");
+                navigate(location?.state?location.state:'/');
             })
             .catch(err => {
                 console.log(err);
@@ -39,8 +40,8 @@ const Login = () => {
         signIn(email,password)
         .then(result => {
             console.log(result.user)
-            navigate(location?.state?location.state:'/');
             swal("Good job!", "You are logged in!", "success");
+            navigate(location?.state?location.state:'/');
 
         })
         .catch(error =>{

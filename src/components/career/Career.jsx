@@ -23,12 +23,12 @@ const Career = () => {
             <div>
                 <h2 className="text-4xl font-bold text-center my-5 text-orange-600">How We Work</h2>
                 <div className="flex flex-col lg:flex-row justify-center items-center">
-                    <p className="w-96 h-80  text-base-900">Empowering Education: We believe that education is the foundation for personal and professional growth. We provide access to cutting-edge educational resources and programs that empower our team members to continuously learn and develop their skills.</p>
-                    <img data-aos="fade-right" className="w-96 h-80 mb-5" src="https://i.ibb.co/ckpznG3/career2.png" alt="" />
+                    <p className="w-80 h-80  text-base-900">Empowering Education: We believe that education is the foundation for personal and professional growth. We provide access to cutting-edge educational resources and programs that empower our team members to continuously learn and develop their skills.</p>
+                    <img data-aos="zoom-in-up" className="w-96 h-80 mb-5" src="https://i.ibb.co/ckpznG3/career2.png" alt="" />
                 </div>
                 <div className="flex flex-col-reverse lg:flex-row justify-center items-center">
-                <img data-aos="fade-right" className="w-96 h-80" src="https://i.ibb.co/pQ2MN1Z/career3.png" alt="" />
-                    <p className="w-96 h-80 text-base-900">Team Collaboration: Collaboration is at the heart of our success. We foster a culture of teamwork, where diverse perspectives come together to solve complex challenges. Our team members work together to achieve common goals and drive innovation.</p>
+                <img data-aos="zoom-in-up" className="w-96 h-80" src="https://i.ibb.co/pQ2MN1Z/career3.png" alt="" />
+                    <p className="w-80 h-80 text-base-900">Team Collaboration: Collaboration is at the heart of our success. We foster a culture of teamwork, where diverse perspectives come together to solve complex challenges. Our team members work together to achieve common goals and drive innovation.</p>
                     
                 </div>
             </div>

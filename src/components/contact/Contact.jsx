@@ -10,7 +10,7 @@ const Contact = () => {
                 <img src="https://i.ibb.co/YDC2Yfj/undraw-Contact-us-re-4qqt.png"className="rounded-xl mt-5" alt="" />
                 <p className="text-center">You will be hearing from us within 24 Hours</p>
             </div>
-            <div className="w-96 mx-auto">
+            <div className="w-80 lg:w-96 mx-auto">
             <form className="px-4 py-4 max-w-4xl">
                             <input type="email" placeholder="Email" className="input input-bordered w-full" required />
                             <input type="password" placeholder="Password" className="input input-bordered my-2 w-full" required />
