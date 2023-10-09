@@ -13,7 +13,8 @@ const Register = () => {
         const name=form.get("name");
         const email=form.get("email");
         const password=form.get("password");
-        console.log(email);
+        const photo =form.get("PhotoURL")
+        console.log(email,photo);
         console.log(password);
         console.log(name);
         
@@ -35,7 +36,7 @@ const Register = () => {
         createUser(email,password,name)
         .then(result =>{
             console.log(result.user);
-            updateUser(name,null)
+            updateUser(name,photo)
             .then(()=>console.log("updated"))
             .catch()
             swal("Congrats,You are logged in");
@@ -56,6 +57,12 @@ const Register = () => {
           </label>
           <input type="text" placeholder="name" name="name" className="input input-bordered" required />
         </div>
+        <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Photo URL</span>
+                                </label>
+                                <input type="text" placeholder="Photo URL" name="PhotoURL" className="input input-bordered" required />
+                            </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
