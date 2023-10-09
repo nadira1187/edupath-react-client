@@ -45,6 +45,7 @@ const Login = () => {
         })
         .catch(error =>{
             console.error(error);
+            swal("Login Failed", "Email or password is incorrect", "error");
         })
     }
     return (
